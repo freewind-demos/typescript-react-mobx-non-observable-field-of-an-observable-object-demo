@@ -1,4 +1,8 @@
-import {action, computed, observable} from 'mobx';
+import {observable, action, computed} from 'mobx';
+
+export class Store {
+  counter = new Counter();
+}
 
 export class Counter {
   @observable count: number = 0
@@ -10,5 +14,4 @@ export class Counter {
   @computed get double() {
     return this.count * 2;
   }
-
 }
